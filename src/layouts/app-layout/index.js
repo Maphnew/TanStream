@@ -12,7 +12,14 @@ const AppLayout = () => {
       <CodeOutlined style={{ color: "orange" }}/> TanStream
       </Header>
       <Layout>
-        <Sider width={200} className="site-layout-background">
+        <Sider width={200} className="site-layout-background"
+          style={{
+            overflow: 'auto',
+            height: '100vh',
+            position: 'fixed',
+            left: 0,
+          }}
+        >
           <Menu
             mode="inline"
             defaultSelectedKeys={['1']}
@@ -39,7 +46,7 @@ const AppLayout = () => {
             </SubMenu>
           </Menu>
         </Sider>
-        <Layout style={{ padding: '0 24px 24px' }}>
+        <Layout style={{ padding: '0 24px 24px', marginLeft: "200px" }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>List</Breadcrumb.Item>
