@@ -36,3 +36,11 @@
 .mobile-nav-menu {
     height: calc(100vh - #{$header-height} - 10px);
 }
+
+.ant-menu-light .ant-menu-submenu-title:hover {
+    color: $primary;
+}
+
+.ant-menu-light .ant-menu-item:hover {
+    color: $primary;
+}

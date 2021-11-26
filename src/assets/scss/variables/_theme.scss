@@ -5,6 +5,7 @@ $white:                     #ffffff  !default;
 $black:                     #000000  !default;
 $red:                       #de4436  !default;
 $orange:                    #fa8c16  !default;
+$darkorange:                darkorange !default;
 $gold:                      #ffc542  !default;
 $green:                     #21B573  !default;
 $blue:                      #3e82f7  !default; 
@@ -25,7 +26,7 @@ $gray-lightest:             #f7f7f8  !default;
 
 
 // State Colors
-$primary:                    $blue !default;
+$primary:                    $darkorange !default;
 $secondary:                  $purple !default;
 $success:                    $cyan !default;
 $info:                       $blue !default;
