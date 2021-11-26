@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined, CodeOutlined } from '@ant-design/icons';
 
@@ -6,16 +6,21 @@ const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 const AppLayout = () => {
+  const [ collapsed, setCollapsed ] = useState(false);
+  const onCollapse = () => {
+    setCollapsed(!collapsed)
+  }
   return (
     <Layout>
       <Header className="header" style={{ color: "white" }}>
       <CodeOutlined style={{ color: "orange" }}/> TanStream
       </Header>
       <Layout>
-        <Sider width={200} className="site-layout-background"
+        <Sider collapsible={true} onCollapse={onCollapse} width={200} collapsed={collapsed} className="site-layout-background"
           style={{
             overflow: 'auto',
-            height: '100vh',
+            overflowX: 'hidden',
+            height: '83vh',
             position: 'fixed',
             left: 0,
           }}
@@ -46,7 +51,7 @@ const AppLayout = () => {
             </SubMenu>
           </Menu>
         </Sider>
-        <Layout style={{ padding: '0 24px 24px', marginLeft: "200px" }}>
+        <Layout style={{ padding: '0 24px 24px' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>List</Breadcrumb.Item>
