@@ -1,3 +1,93 @@
 @import '../node_modules/antd/dist/antd.css';
-@import 'assets/scss/global';
-@import 'assets/scss/utilities/utilities';
+@import 'assets/scss/variables/variables.scss';
+// @import 'assets/scss/global';
+// @import 'assets/scss/utilities/utilities';
+
+.ant-layout-sider {
+    background: #fff;
+}
+
+.ant-menu-item-selected {
+    color: $primary;
+  }
+  
+  .ant-menu-submenu-selected{
+    color: $primary;
+  }
+
+  .ant-menu-light .ant-menu-submenu-title:hover {
+    color: $primary;
+}
+
+.ant-menu-light .ant-menu-item:hover {
+    color: $primary;
+}
+
+.ant-layout-sider-trigger {
+    background: #303030;
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+.ant-menu {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-weight: $font-weight-semibold;
+    color: $menu-text;
+  
+    &:not(.ant-menu-horizontal) {
+      .ant-menu-item-selected {
+        @include background-opacity($primary, 0.1);
+  
+        a {
+          color: $primary;
+        }
+      }
+    }
+  
+    &:not(.ant-menu-dark) {
+      a {
+        color: $menu-text;
+  
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+  
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  
+    &.ant-menu-dark {
+      background: $menu-dark-bg;
+  
+      .ant-menu-item-selected {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+  }
+
+  .ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left,
+.ant-menu-vertical-right {
+  .ant-menu-item {
+    &:after {
+      border-right: 3px solid $primary;
+    }
+  }
+}
+
+.ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
+    color: $primary
+}
+
+.ant-layout-header {
+    background: #303030;
+}
