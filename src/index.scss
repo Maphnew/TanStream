@@ -3,6 +3,17 @@
 // @import 'assets/scss/global';
 // @import 'assets/scss/utilities/utilities';
 
+body {
+  font-family: $font-family-base;
+  background-color: $body-bg;
+  color: $body-color;
+  overflow-x: hidden;
+}
+
+.ant-layout {
+  background: transparent;
+}
+
 .ant-layout-sider {
     background: #fff;
 }
@@ -88,6 +99,7 @@
     color: $primary
 }
 
-.ant-layout-header {
-    background: #303030;
+.site-layout-background {
+  background: #fff;
 }
+

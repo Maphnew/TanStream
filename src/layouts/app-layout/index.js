@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
+import Header from 'components/layout-components/Header';
 import { UserOutlined, LaptopOutlined, NotificationOutlined, CodeOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 const AppLayout = () => {
   const [ collapsed, setCollapsed ] = useState(false);
