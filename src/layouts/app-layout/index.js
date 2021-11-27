@@ -20,7 +20,7 @@ const AppLayout = () => {
           style={{
             overflow: 'auto',
             overflowX: 'hidden',
-            height: '83vh',
+            height: 'calc(100vh - 48px - 64px - 10px)',
             position: 'fixed',
             left: 0,
           }}
