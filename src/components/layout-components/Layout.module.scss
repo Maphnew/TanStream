@@ -1,0 +1,26 @@
+.ant-layout {
+    background: transparent;
+  }
+  
+  .ant-layout-sider {
+      background: #fff;
+  }
+  
+  .ant-layout-sider-trigger {
+    background: #303030;
+  }
+
+  .ant-layout-header {
+    color: white;
+    background: #303030;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+:global {
+  .ant-layout-sider-trigger {
+    background: #303030;
+  }
+}

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
-import Header from 'components/layout-components/Header';
+import { Menu, Breadcrumb } from 'antd';
+import Layout, { Header, Sider, Content } from 'components/layout-components/Layout';
 import { UserOutlined, LaptopOutlined, NotificationOutlined, CodeOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
-const { Content, Sider } = Layout;
 
 const AppLayout = () => {
   const [ collapsed, setCollapsed ] = useState(false);
@@ -17,7 +16,7 @@ const AppLayout = () => {
       <CodeOutlined style={{ color: "orange" }}/> TanStream
       </Header>
       <Layout>
-        <Sider collapsible={true} onCollapse={onCollapse} width={200} collapsed={collapsed} className="site-layout-background"
+        <Sider collapsible={true} onCollapse={onCollapse} width={200} collapsed={collapsed}
           style={{
             overflow: 'auto',
             overflowX: 'hidden',
@@ -37,6 +36,12 @@ const AppLayout = () => {
               <Menu.Item key="2">option2</Menu.Item>
               <Menu.Item key="3">option3</Menu.Item>
               <Menu.Item key="4">option4</Menu.Item>
+              <SubMenu key="sub1-1" icon={<CodeOutlined />} title="subnav 1-1">
+                <Menu.Item key="13">option13</Menu.Item>
+                <Menu.Item key="14">option14</Menu.Item>
+                <Menu.Item key="15">option15</Menu.Item>
+                <Menu.Item key="16">option16</Menu.Item>
+              </SubMenu>
             </SubMenu>
             <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
               <Menu.Item key="5">option5</Menu.Item>
@@ -59,11 +64,10 @@ const AppLayout = () => {
             <Breadcrumb.Item>App</Breadcrumb.Item>
           </Breadcrumb>
           <Content
-            className="site-layout-background"
             style={{
               padding: 24,
               margin: 0,
-              minHeight: 280,
+              minHeight: 400,
             }}
           >
             Content
